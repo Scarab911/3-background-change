@@ -42,8 +42,9 @@ class Random {
         let pickedColor = '';
         const colorID = Math.floor(Math.random() * this.colorArray.length);
         pickedColor = this.colorArray[colorID];
-        console.log(pickedColor);
         this.render(pickedColor);
+        //vel iskvieciam ivykiu stebejima
+        this.addEvents();
     }
 }
 export { Random };
