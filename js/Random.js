@@ -14,25 +14,27 @@ class Random {
         this.render();
         this.addEvents();
     }
-    generateContent(color = '#ccc') {
-        return `<div class="background" style="background-color:${color};">
-                    <h1> Push the button to change Background</h1>
-                    <button id="random" type="button">Click Here</button>
-                </div>`
-    };
+    // renderContent(color = '#ccc') {
+    //     let HTML = `<div class="background" style="background-color:${color};">
+    //                     <h1>Push the button to change Background</h1>
+    //                     <button id="random" type="button">Click Here</button>
+    //                 </div>`;
+
+    // <p>You have changed background color to ${color}</p>
+    //     this.DOM.innerHTML = HTML;
+    //     this.buttonDOM = document.getElementById('random');
+    // };
     render(color = '#ccc') {
         let HTML = `<div class="background" style="background-color:${color};">
-        <h1>Push the button to change Background</h1>
-        <button id="random" type="button">Click Here</button>
-        </div>`;
+                        <h1>Push the button to change Background</h1>
+                        <button id="random" type="button">Click Here</button>
+                    </div>`;
 
         this.DOM.innerHTML = HTML;
-        console.log(color);
         this.buttonDOM = document.getElementById('random');
     }
     addEvents() {
         this.buttonDOM.addEventListener('click', () => {
-            console.log('keiciam');
             this.randomColor();
         });
     }
